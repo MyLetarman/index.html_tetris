@@ -1,0 +1,79 @@
+/* General reset and full viewport */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Full screen */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #111;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Container to center everything */
+  #game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Game board container */
+  #tetris-board {
+    display: inline-block;
+    background-color: #222;
+    border: 2px solid #fff;
+    padding: 5px;
+    width: 300px; /* Adjusted width */
+    height: 600px; /* Increased height */
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+  }
+  
+  /* Tetris grid layout */
+  #tetris {
+    display: grid;
+    grid-template-columns: repeat(10, 30px); /* Increased block size */
+    grid-template-rows: repeat(20, 30px); /* Increased rows */
+    gap: 1px;
+    background-color: #222;
+  }
+  
+  /* Block appearance */
+  .block {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+  }
+  
+  .tetromino {
+    background-color: red;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  /* Game Over screen */
+  .game-over {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Scoreboard styles at the bottom */
+  #score-board {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px; /* Space between game area and score */
+  }
+  
+  #high-score {
+    font-size: 14px; /* Smaller font size for high score */
+  }
+  
